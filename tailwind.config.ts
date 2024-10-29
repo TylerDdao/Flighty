@@ -11,9 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#536AFF",
+        primary_fade: "#F5F6FF",
+        s2condTest2: '#2af1b5'
       },
     },
   },
   plugins: [],
+  safelist: [{
+    pattern: /(bg|text|border)-s2cond(Purple|Pink|Orange|Yellow|Lime|Mint|Test|Test2)/,}]
 };
 export default config;
