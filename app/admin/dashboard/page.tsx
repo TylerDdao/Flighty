@@ -25,8 +25,8 @@ const ePax:number[]=[];
 for(let i = 0; i < 12; i++){
     let paxNumb =0;
     for(let j=0;j<flights.length;j++){
-        if(flights[j].Time.getMonth() == i){
-            paxNumb = paxNumb + flights[j].FPax + flights[j].PPax + flights[j].EPax;
+        if(flights[j].time.getMonth() == i){
+            paxNumb = paxNumb + flights[j].fPax + flights[j].pPax + flights[j].ePax;
         }
     }
     paxNumb /= 100;
@@ -36,8 +36,8 @@ for(let i = 0; i < 12; i++){
 for(let i = 0; i < 12; i++){
     let paxNumb =0;
     for(let j=0;j<flights.length;j++){
-        if(flights[j].Time.getMonth() == i){
-            paxNumb = paxNumb + flights[j].FPax;
+        if(flights[j].time.getMonth() == i){
+            paxNumb = paxNumb + flights[j].fPax;
         }
     }
     paxNumb /= 100;
@@ -47,8 +47,8 @@ for(let i = 0; i < 12; i++){
 for(let i = 0; i < 12; i++){
     let paxNumb =0;
     for(let j=0;j<flights.length;j++){
-        if(flights[j].Time.getMonth() == i){
-            paxNumb = paxNumb + flights[j].PPax;
+        if(flights[j].time.getMonth() == i){
+            paxNumb = paxNumb + flights[j].pPax;
         }
     }
     paxNumb /= 100;
@@ -58,8 +58,8 @@ for(let i = 0; i < 12; i++){
 for(let i = 0; i < 12; i++){
     let paxNumb =0;
     for(let j=0;j<flights.length;j++){
-        if(flights[j].Time.getMonth() == i){
-            paxNumb = paxNumb + flights[j].EPax;
+        if(flights[j].time.getMonth() == i){
+            paxNumb = paxNumb + flights[j].ePax;
         }
     }
     paxNumb /= 100;
