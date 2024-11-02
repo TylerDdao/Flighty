@@ -5,7 +5,7 @@
 // Time: Date,
 // Status: string,
 // Note: string
-import { Flight, Airport, Route } from "./definition"
+import { Flight, Airport } from "./definition"
 
 // function GenerateDate(DayInWeek:number, StartDay:Date){
 //     let results: Date[] = [];

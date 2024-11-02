@@ -58,30 +58,30 @@ async function seedFlight(){
   return insertedAirports;
   }
 
-  async function seedRoutes(){
-    console.log(client);
-    // await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
-    await client.sql`
-      CREATE TABLE IF NOT EXISTS routes (
-        code varchar(5) PRIMARY KEY,
-        city varchar(50),
-        country varchar(50)
-      );
-    `;
-    // Combine both flight arrays and sort them by time in ascending order
+  // async function seedRoutes(){
+  //   console.log(client);
+  //   // await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
+  //   await client.sql`
+  //     CREATE TABLE IF NOT EXISTS routes (
+  //       code varchar(5) PRIMARY KEY,
+  //       city varchar(50),
+  //       country varchar(50)
+  //     );
+  //   `;
+  //   // Combine both flight arrays and sort them by time in ascending order
 
 
-  const insertedAirports = await Promise.all(
-    airports.map(async (airport) => {
-          return client.sql`
-              INSERT INTO airports (code, city, country)
-              VALUES (${airport.code}, ${airport.city}, ${airport.country})
-              ON CONFLICT (code) DO NOTHING;
-          `;
-      }),
-  );
-  return insertedAirports;
-  }
+  // const insertedAirports = await Promise.all(
+  //   airports.map(async (airport) => {
+  //         return client.sql`
+  //             INSERT INTO airports (code, city, country)
+  //             VALUES (${airport.code}, ${airport.city}, ${airport.country})
+  //             ON CONFLICT (code) DO NOTHING;
+  //         `;
+  //     }),
+  // );
+  // return insertedAirports;
+  // }
 
   export async function GET() {
     try {

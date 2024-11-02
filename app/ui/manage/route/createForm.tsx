@@ -1,10 +1,9 @@
 'use client';
 
-import { fetchAirports } from "@/app/lib/data";
 import { Airport } from "@/app/lib/definition";
 import React, { useState } from "react";
 
-export default function CreateFlightForm({ airports }: { airports: Airport[] }){
+export default function CreateForm({ airports }: { airports: Airport[] }){
     const [origin, setOrigin] = useState<string>(''); // Selected origin
     const [destination, setDestination] = useState<string>(''); // Selected destination
     const [layovers, setLayovers] = useState<string[]>([]); // Array of selected layovers
